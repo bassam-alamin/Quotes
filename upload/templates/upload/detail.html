@@ -1,0 +1,45 @@
+{% extends 'upload/base.html' %}
+{% block title %}Quotes | Details {% endblock %}
+{% block body %}
+ <section>
+        <div class="image">
+
+            <img src="{{ author.author_logo.url }}">
+            <h1>{{ author.author }} &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                {% if user.is_authenticated %}<a href="{% url 'upload:author-update' author.id %}">Edit Author</a>{% endif %}&nbsp;&nbsp;<a href="#">Delete Author</a></h1>
+        </div>
+
+
+        {% for saying in author.saying_set.all %}
+            <div class="quotes">
+                <p style="float:left;"><u><b>{{ saying.category }}</b></u></p>
+                    {% if user.is_authenticated %}<p style="float:right;"><a href="{% url 'upload:saying-edit' saying.id %}">Edit Saying</a></p>{% endif %}
+                    <br>
+
+                    <p>{{ saying.content }}</p>
+            </div>
+
+        {% endfor %}
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+<form action="{% url 'upload:author-delete' author.id %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+    <footer>
+        <p>bassam alamin quote site &copy;2018</p>
+
+
+    </footer>
+{% endblock %}

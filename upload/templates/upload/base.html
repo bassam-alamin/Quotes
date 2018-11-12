@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Quotes{% endblock %}</title>
+    {% load staticfiles %}
+
+    <link type="text/css" rel="stylesheet" href="{% static 'upload/style.css' %}"/>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+                <div id="brand">
+                    <h1><a href="{% url 'upload:home' %}">Quotes</a></h1>
+                </div>
+
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'upload:author-add' %}">Add Author</a></li>
+                        <li><a href="{% url 'upload:saying-add' %}">Add Saying</a></li>
+                        <li><a href="{% url 'upload:logout' %}">Logout</a></li>
+                    {% endif %}
+                    {% if user.is_anonymous %}
+                        <li><a href="{% url 'upload:login' %}">Login</a></li>
+                        <li><a href="{% url 'upload:register' %}">Register</a></li>
+                    {% endif %}
+
+
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+{% block body %}
+{% endblock %}
+
+</body>
+</html>

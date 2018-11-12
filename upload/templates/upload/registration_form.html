@@ -1,0 +1,34 @@
+{% extends 'upload/base.html' %}
+{% block title %}Quotes | Register {% endblock %}
+{% block body %}
+<section>
+
+        <div class="login">
+            <h1>Register here.</h1>
+            <form id="log"  method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+        {% include 'upload/form-template.html' %}
+
+        <button type="submit">Register</button>
+
+
+
+
+            </form>
+            </div>
+
+
+
+
+    </section>
+     <footer>
+
+        <p>bassam alamin quote site &copy;2018</p>
+
+
+    </footer>
+
+
+
+</form>
+{% endblock %}

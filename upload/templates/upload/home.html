@@ -1,0 +1,46 @@
+{% extends 'upload/base.html' %}
+{% block title %}Quotes | welcome {% endblock %}
+{% block body %}
+
+    {% load staticfiles %}
+
+     <section id="slideshow">
+
+        <div id="slide">
+        </div>
+    </section>
+    <aside id="side">
+        <div class ="container">
+            <img src="{% static 'upload/images/javas.jpg' %}">
+
+            <p>remember no one listens to a poor philosopher</p>
+
+        </div>
+
+
+
+    </aside>
+    <section id="author">
+
+<h5>Here is the list of the Authors</h5>
+<ul>
+    {% for author in object_list %}
+        <li><a href="{% url 'upload:detail' author.id %}">{{ author.author }}</a></li>
+
+
+    {% endfor %}
+
+</ul>
+    </section>
+
+    <footer>
+
+        <p>bassam alamin quote site &copy;2018</p>
+
+
+    </footer>
+
+
+
+
+{% endblock %}

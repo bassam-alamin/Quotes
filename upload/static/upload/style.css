@@ -1,0 +1,244 @@
+body{
+    font-family:Arial,sans-serif;
+    font-size:15px;
+    background:navajowhite;
+    padding: 0px;
+    margin:0px;
+    line-height: 1.5;
+}
+
+.container{
+    max-width:80%;
+    margin:auto;
+    overflow:hidden;
+
+
+}
+ul{
+   margin:0;
+   padding: 15px;
+   list-style-type:none;
+}
+a{
+    text-decoration: none;
+
+}
+a:hover{
+    font-weight: bold;
+}
+p{
+    padding:0;
+    margin:0;
+}
+/*=====================================HEADER============================================================*/
+header{
+
+    background:maroon;
+    color:white;
+    margin:0px;
+    min-height: 70px;
+    border-radius:10px ;
+
+
+
+}
+header ul li a{
+    text-decoration:none;
+    text-transform: uppercase;
+    color:aliceblue;
+
+
+
+
+}
+
+header .current a{
+    color:blue;
+
+}
+header a:hover{
+    color:limegreen;
+    font-weight:bold;
+
+}
+
+header li{
+    float:left;
+    display:inline;
+    padding: 0 20px 0 20px;
+
+
+
+}
+
+header nav{
+    float:right;
+    margin: 0px;
+}
+header h1{
+    float:left;
+}
+header #brand {
+    padding-bottom:20px;
+    color:yellow;
+
+}
+
+/*=====================================================slideshow section=====================================================*/
+
+
+#slideshow{
+    background:blue url("images/background.jpg") no-repeat 0-30px;
+    background-size: cover;
+    width:65%;  
+    min-height:350px;
+    margin:0px;
+    padding:0px;
+    float:left;
+    display: inline;
+
+    
+}
+
+#slide img {
+    width: 100%;
+    height: 350px;
+
+}
+/*==================================================authors section=====================================================*/
+
+#author{
+    background:aliceblue;
+    min-height:350px;
+    width:65%;
+    float:left;
+    display:inline;
+    overflow:auto;
+
+
+
+}
+
+/*===========================================side section=================================================*/
+#side{
+    float:right;
+    margin-top:0px;
+    width:35%;
+    background:navajowhite;
+    min-height:700px;
+}
+#side .container img{
+    width:250px;
+    height:250px;
+
+}
+
+
+/*===========================================footer===========================================*/
+footer{
+    padding:20px;
+    margin-top:20px;
+    color:#ffffff;
+    background-color:#e8491d;
+    text-align:center;
+
+
+
+}
+/*=================================FORMS================================*/
+
+.login{
+    background:black;
+    margin-left:500px;
+    margin-top: 50px;
+    width:300px;
+    height:400px;
+    text-align: center;
+    padding:50px 30px;
+
+}
+.login h1{
+    color:aliceblue;
+    margin:0px;
+
+}
+
+.login input{
+    width:100%;
+    margin-bottom:10px;
+}
+.login input[type="text"], input[type="password"]{
+    color:white;
+    border:none;
+    border-bottom:1px solid white;
+    background:transparent;
+    outline: none;
+    height:30px;
+}
+
+.add{
+    background:black;
+    margin-left:50px;
+    margin-top: 50px;
+    width:300px;
+    height:400px;
+    text-align: center;
+    padding:50px 30px;
+
+}
+.add h1{
+    color:aliceblue;
+    margin:0px;
+
+}
+
+.add input,textarea{
+    width:100%;
+    margin-bottom:10px;
+}
+.add input, textarea{
+    color:white;
+    border:none;
+    border-bottom:1px solid white;
+    background:transparent;
+    outline: none;
+    height:30px;
+}
+
+#log{
+    padding-top:50px;
+    color:white;
+}
+.button_1{
+    margin-bottom: 10px;
+    background: yellow;
+    width:100%;
+    height: 30px;
+}
+
+/*================================================Details========================================*/
+.image{
+    max-width:50%;
+    margin:10px;
+
+}
+.image img{
+    width:250px;
+    height:250px;
+
+}
+
+.quotes{
+    width:50%;
+    background:white;
+    height: auto;
+    margin:10px;
+    padding:6px;
+    border-radius: 10px;
+    border:1px solid black;
+
+
+}
+
+
+
